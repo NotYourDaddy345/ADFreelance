@@ -1,330 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AD_Typist | High CTR YouTube Thumbnails</title>
-    <style>
-        /* --- CSS STYLES --- */
-        :root {
-            --bg-color: #0f0f11;
-            --card-bg: #1a1a1d;
-            --text-main: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent: #6c5ce7; /* Purple accent */
-            --accent-hover: #5649c0;
-            --fiverr-green: #1dbf73;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+<title>AD_Typist | High CTR YouTube Thumbnails</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-        a { text-decoration: none; color: inherit; }
+<style>
 
-        /* HEADER */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background-color: rgba(15, 15, 17, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #333;
-        }
+:root{
+--bg:#0f0f11;
+--card:#1a1a1d;
+--text:#ffffff;
+--text2:#a0a0a0;
+--accent:#6c5ce7;
+--accent-hover:#5649c0;
+--fiverr:#1dbf73;
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-main);
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-        .logo span { color: var(--accent); }
+body{
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
 
-        .btn-fiverr {
-            background-color: var(--fiverr-green);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+a{
+text-decoration:none;
+color:inherit;
+}
 
-        .btn-fiverr:hover { background-color: #15965b; transform: translateY(-2px); }
+/* HEADER */
 
-        /* HERO SECTION */
-        .hero {
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: radial-gradient(circle at center, #2a2a35 0%, #0f0f11 70%);
-        }
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 5%;
+background:rgba(15,15,17,.95);
+position:sticky;
+top:0;
+border-bottom:1px solid #333;
+z-index:1000;
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
+.logo{
+font-size:1.5rem;
+font-weight:700;
+}
 
-        .hero h1 span {
-            color: var(--accent);
-            background: -webkit-linear-gradient(45deg, #6c5ce7, #a29bfe);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+.logo span{
+color:var(--accent);
+}
 
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin-bottom: 40px;
-        }
+.btn-fiverr{
+background:var(--fiverr);
+padding:10px 20px;
+border-radius:6px;
+font-weight:600;
+color:white;
+transition:.3s;
+}
 
-        .cta-group {
-            display: flex;
-            gap: 20px;
-        }
+.btn-fiverr:hover{
+background:#15965b;
+transform:translateY(-2px);
+}
 
-        .btn-primary {
-            background-color: var(--accent);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* HERO */
 
-        .btn-primary:hover { background-color: var(--accent-hover); }
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+background:radial-gradient(circle,#2a2a35 0%,#0f0f11 70%);
+}
 
-        /* PORTFOLIO GRID */
-        .portfolio {
-            padding: 80px 5%;
-        }
+.hero h1{
+font-size:3.5rem;
+margin-bottom:20px;
+line-height:1.2;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-        }
+.hero span{
+background:linear-gradient(45deg,#6c5ce7,#a29bfe);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+.hero p{
+color:var(--text2);
+max-width:600px;
+margin-bottom:40px;
+}
 
-        .card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: 0.3s;
-            position: relative;
-            cursor: pointer;
-        }
+.btn-primary{
+background:var(--accent);
+padding:15px 30px;
+border-radius:50px;
+font-weight:600;
+color:white;
+transition:.3s;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
-        }
+.btn-primary:hover{
+background:var(--accent-hover);
+}
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
+/* PORTFOLIO */
 
-        .card-info {
-            padding: 15px;
-        }
+.portfolio{
+padding:80px 5%;
+}
 
-        .card-info h3 { font-size: 1.1rem; margin-bottom: 5px; }
-        .card-info p { font-size: 0.9rem; color: var(--text-secondary); }
+.section-title{
+text-align:center;
+font-size:2.5rem;
+margin-bottom:50px;
+}
 
-        /* SERVICES */
-        .services {
-            padding: 80px 5%;
-            background-color: #151518;
-            text-align: center;
-        }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
 
-        .service-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
+.card{
+background:var(--card);
+border-radius:10px;
+overflow:hidden;
+transition:.3s;
+}
 
-        .service-box {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            width: 300px;
-            border: 1px solid #333;
-        }
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 20px rgba(108,92,231,.25);
+}
 
-        .service-box h3 { color: var(--accent); margin-bottom: 15px; }
+.card img{
+width:100%;
+height:auto;
+display:block;
+}
 
-        /* ABOUT */
-        .about {
-            padding: 80px 5%;
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
+.card-info{
+padding:15px;
+}
 
-        .about-text { flex: 1; min-width: 300px; }
-        .about-text h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .about-text p { color: var(--text-secondary); margin-bottom: 20px; }
-        
-        .about-img {
-            flex: 1;
-            min-width: 300px;
-            height: 300px;
-            background-color: #333;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 1.2rem;
-        }
+.card-info h3{
+margin-bottom:5px;
+}
 
-        /* FOOTER */
-        footer {
-            padding: 40px 5%;
-            text-align: center;
-            border-top: 1px solid #333;
-            color: var(--text-secondary);
-        }
+.card-info p{
+font-size:.9rem;
+color:var(--text2);
+}
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .cta-group { flex-direction: column; }
-            .about { flex-direction: column; }
-        }
-    </style>
+/* SERVICES */
+
+.services{
+padding:80px 5%;
+background:#151518;
+text-align:center;
+}
+
+.service-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.service-box{
+background:var(--card);
+padding:30px;
+border-radius:10px;
+width:300px;
+border:1px solid #333;
+}
+
+.service-box h3{
+color:var(--accent);
+margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+padding:80px 5%;
+display:flex;
+gap:50px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+.about-img{
+flex:1;
+display:flex;
+justify-content:center;
+}
+
+.about-img img{
+width:100%;
+max-width:300px;
+border-radius:10px;
+}
+
+.about-text{
+flex:1;
+min-width:300px;
+}
+
+.about-text h2{
+font-size:2.5rem;
+margin-bottom:20px;
+}
+
+.about-text p{
+color:var(--text2);
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 5%;
+text-align:center;
+border-top:1px solid #333;
+color:var(--text2);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+.about{
+flex-direction:column;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <!-- NAVIGATION -->
-    <header>
-        <div class="logo">AD<span>Typist</span></div>
-        <a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-fiverr">Order on Fiverr</a>
-    </header>
+<header>
+<div class="logo">AD<span>Typist</span></div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <h1>Stop the Scroll.<br><span>Get More Clicks.</span></h1>
-        <p>I create high-CTR, eye-catching YouTube thumbnails designed to skyrocket your views. Professional design by Armaan Dutt Sharma.</p>
-        <div class="cta-group">
-            <a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-primary">View My Fiverr Gig</a>
-        </div>
-    </section>
+<a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-fiverr">
+Order on Fiverr
+</a>
 
-    <!-- PORTFOLIO SECTION -->
-    <section class="portfolio">
-        <h2 class="section-title">Recent Work</h2>
-        <div class="grid">
-            <!-- PORTFOLIO ITEM 1 -->
-            <div class="card">
-                <!-- REPLACE 'src' WITH YOUR IMAGE URL -->
-                <img src="Thumbnails\GamingThumbnail.png" alt="YouTube Thumbnail Design">
-                <div class="card-info">
-                    <h3>Gaming Channel Thumbnail</h3>
-                    <p>High contrast, vibrant colors for maximum CTR.</p>
-                </div>
-            </div>
+</header>
 
-            <!-- PORTFOLIO ITEM 2 -->
-            <div class="card">
-                <img src="Thumbnails\VlogThumbnail.png" alt="YouTube Thumbnail Design">
-                <div class="card-info">
-                    <h3>Vlog / Lifestyle</h3>
-                    <p>Clean typography and emotional facial expressions.</p>
-                </div>
-            </div>
+<section class="hero">
 
-            <!-- PORTFOLIO ITEM 3 -->
-            <div class="card">
-                <img src="Thumbnails\FinanceThumbnail.png" alt="YouTube Thumbnail Design">
-                <div class="card-info">
-                    <h3>Finance / Business</h3>
-                    <p>Professional, trustworthy, and data-driven design.</p>
-                </div>
-            </div>
+<h1>Stop the Scroll.<br><span>Get More Clicks.</span></h1>
 
-            <!-- PORTFOLIO ITEM 4 -->
-            <div class="card">
-                <img src="Thumbnails\ReactionThumbnail.png" alt="YouTube Thumbnail Design">
-                <div class="card-info">
-                    <h3>Reaction / Commentary</h3>
-                    <p>Exaggerated expressions to drive curiosity.</p>
-                </div>
-            </div>
-        </div>
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-primary">See More on Fiverr</a>
-        </div>
-    </section>
+<p>
+I create high-CTR, eye-catching YouTube thumbnails designed to skyrocket your views.
+Professional design by Armaan Dutt Sharma.
+</p>
 
-    <!-- SERVICES SECTION -->
-    <section class="services">
-        <h2 class="section-title">What I Offer</h2>
-        <div class="service-container">
-            <div class="service-box">
-                <h3>High CTR Design</h3>
-                <p>Thumbnails specifically engineered to get people to click, using color psychology and composition.</p>
-            </div>
-            <div class="service-box">
-                <h3>Fast Delivery</h3>
-                <p>I understand the YouTube schedule. I deliver high-quality work within 24 hours.</p>
-            </div>
-            <div class="service-box">
-                <h3>Enough Revisions</h3>
-                <p>I don't stop until you are 100% satisfied with the look and feel of your thumbnail.</p>
-            </div>
-        </div>
-    </section>
+<a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-primary">
+View My Fiverr Gig
+</a>
 
-    <!-- ABOUT SECTION -->
-    <section class="about">
-        <div class="about-img">
-            <!-- You can put your photo here later -->
-            <img src="Thumbnails\MyImage.png" height="250" width="600">
-        </div>
-        <div class="about-text">
-            <h2>Hi, I'm Armaan Dutt Sharma</h2>
-            <p>Known as <strong>AD_Typist</strong> on Fiverr, I am a professional graphic designer specializing in YouTube thumbnails.</p>
-            <p>I don't just make things look "pretty"—I make them perform. My designs are based on what works on the platform: bold colors, clear text, and emotional hooks.</p>
-            <p>Let's take your channel to the next level.</p>
-            <a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-fiverr">Hire Me Now</a>
-        </div>
-    </section>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 AD_Typist. All rights reserved.</p>
-        <p>Designed for Fiverr Success.</p>
-    </footer>
+<section class="portfolio">
+
+<h2 class="section-title">Recent Work</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="Thumbnails/GamingThumbnail.png">
+<div class="card-info">
+<h3>Gaming Channel Thumbnail</h3>
+<p>High contrast, vibrant colors for maximum CTR.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Thumbnails/VlogThumbnail.png">
+<div class="card-info">
+<h3>Vlog / Lifestyle</h3>
+<p>Clean typography and emotional facial expressions.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Thumbnails/FinanceThumbnail.png">
+<div class="card-info">
+<h3>Finance / Business</h3>
+<p>Professional, trustworthy design.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="Thumbnails/ReactionThumbnail.png">
+<div class="card-info">
+<h3>Reaction / Commentary</h3>
+<p>Exaggerated expressions to drive curiosity.</p>
+</div>
+</div>
+
+</div>
+
+<div style="text-align:center;margin-top:40px;">
+
+<a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-primary">
+See More on Fiverr
+</a>
+
+</div>
+
+</section>
+
+<section class="services">
+
+<h2 class="section-title">What I Offer</h2>
+
+<div class="service-container">
+
+<div class="service-box">
+<h3>High CTR Design</h3>
+<p>Thumbnails engineered to get more clicks using color psychology and composition.</p>
+</div>
+
+<div class="service-box">
+<h3>Fast Delivery</h3>
+<p>I deliver high quality work within 24 hours.</p>
+</div>
+
+<div class="service-box">
+<h3>Enough Revisions</h3>
+<p>I keep improving the design until you're satisfied.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="about">
+
+<div class="about-img">
+<img src="Thumbnails/MyImage.png">
+</div>
+
+<div class="about-text">
+
+<h2>Hi, I'm Armaan Dutt Sharma</h2>
+
+<p>
+Known as <strong>AD_Typist</strong> on Fiverr,
+I specialize in high-CTR YouTube thumbnails.
+</p>
+
+<p>
+I design thumbnails that don't just look good —
+they make people click.
+</p>
+
+<a href="https://www.fiverr.com/s/VYE2o85" target="_blank" class="btn-fiverr">
+Hire Me Now
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 AD_Typist</p>
+<p>Designed for Fiverr success</p>
+
+</footer>
 
 </body>
 </html>
